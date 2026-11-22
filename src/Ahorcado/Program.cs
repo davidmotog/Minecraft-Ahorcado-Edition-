@@ -6,6 +6,8 @@ internal static class Program
     private static void Main()
     {
         ApplicationConfiguration.Initialize();
-        Application.Run(new VentanaJuego());
+        using var fuente = new FuentePixel();
+        using var ventana = new VentanaJuego(fuente);
+        Application.Run(ventana);
     }
 }

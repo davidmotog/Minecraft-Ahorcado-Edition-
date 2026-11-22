@@ -8,11 +8,14 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyName>Ahorcado</AssemblyName>
     <Product>Ahorcado: edición Minecraft</Product>
-    <Description>Juego del ahorcado con criaturas de Minecraft</Description>
-    <Version>1.2026.11.22</Version>
+    <Description>Juego del ahorcado con el catálogo de Minecraft Java</Description>
+    <Version>2.2026.11.22</Version>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="../../LICENSE" Link="LICENSE" />
+    <EmbeddedResource Include="Recursos/catalogo.json" LogicalName="Ahorcado.catalogo.json" />
+    <EmbeddedResource Include="Recursos/PixelifySans-Regular.ttf" LogicalName="Ahorcado.PixelifySans-Regular.ttf" />
+    <EmbeddedResource Include="Recursos/PixelifySans-OFL.txt" />
   </ItemGroup>
 </Project>

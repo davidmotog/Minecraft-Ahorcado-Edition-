@@ -10,6 +10,7 @@ internal sealed class Partida
     public const int MaxFallos = 6;
 
     private readonly string solucionNormalizada;
+    private readonly HashSet<string> soluciones;
     private readonly HashSet<string> intentos = new(StringComparer.Ordinal);
     private readonly HashSet<char> letras = [];
     private readonly List<char> ordenLetras = [];
@@ -20,12 +21,15 @@ internal sealed class Partida
     public EstadoPartida Estado { get; private set; } = EstadoPartida.EnCurso;
     public string LetrasUsadas => string.Join(" ", ordenLetras);
 
-    public Partida(string solucion)
+    public Partida(string solucion, IEnumerable<string>? alias = null)
     {
         Solucion = solucion;
         solucionNormalizada = Normalizar(solucion);
         if (!EsValido(solucionNormalizada))
             throw new ArgumentException("La solución debe contener letras.", nameof(solucion));
+        soluciones = new(StringComparer.Ordinal) { solucionNormalizada };
+        if (alias is not null)
+            soluciones.UnionWith(alias.Select(Normalizar).Where(EsValido));
     }
 
     public string Mascara
@@ -64,7 +68,7 @@ internal sealed class Partida
                 return ResultadoJugada.Acierto;
             }
         }
-        else if (jugada == solucionNormalizada)
+        else if (soluciones.Contains(jugada))
         {
             Estado = EstadoPartida.Ganada;
             return ResultadoJugada.Acierto;

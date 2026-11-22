@@ -6,6 +6,13 @@ namespace Ahorcado;
 internal sealed class DibujoAhorcado : Control
 {
     private int fallos;
+    private SkinJugador? skin;
+
+    internal void UsarSkin(SkinJugador? nueva)
+    {
+        skin = nueva;
+        Invalidate();
+    }
 
     public DibujoAhorcado()
     {
@@ -58,6 +65,12 @@ internal sealed class DibujoAhorcado : Control
         g.FillRectangle(madera, 47, 27, 112, 7);
         g.FillRectangle(cuerda, 146, 40, 5, 20);
 
+        if (skin is not null)
+        {
+            PintarSkin(g, skin);
+            return;
+        }
+
         if (fallos >= 1)
         {
             g.FillRectangle(metalOscuro, 128, 60, 42, 37);
@@ -77,5 +90,36 @@ internal sealed class DibujoAhorcado : Control
         if (fallos >= 4) g.FillRectangle(metalOscuro, 169, 101, 13, 33);
         if (fallos >= 5) g.FillRectangle(metalOscuro, 132, 139, 13, 34);
         if (fallos >= 6) g.FillRectangle(metalOscuro, 152, 139, 13, 34);
+    }
+
+    private void PintarSkin(Graphics g, SkinJugador jugador)
+    {
+        g.InterpolationMode = InterpolationMode.NearestNeighbor;
+        g.PixelOffsetMode = PixelOffsetMode.Half;
+
+        void Pieza(int desde, Rectangle destino, Rectangle baseSkin, Point capa, bool espejo = false)
+        {
+            if (fallos < desde) return;
+            var estado = g.Save();
+            if (espejo)
+            {
+                g.TranslateTransform(destino.Left + destino.Right, 0);
+                g.ScaleTransform(-1, 1);
+            }
+            g.DrawImage(jugador.Textura, destino, baseSkin, GraphicsUnit.Pixel);
+            if (!jugador.Legado || desde == 1)
+                g.DrawImage(jugador.Textura, destino, new Rectangle(capa, baseSkin.Size), GraphicsUnit.Pixel);
+            g.Restore(estado);
+        }
+
+        int brazo = jugador.Delgado ? 3 : 4;
+        int anchoBrazo = jugador.Delgado ? 10 : 13;
+        bool legado = jugador.Legado;
+        Pieza(1, new(130, 60, 38, 38), new(8, 8, 8, 8), new(40, 8));
+        Pieza(2, new(133, 98, 32, 42), new(20, 20, 8, 12), new(20, 36));
+        Pieza(3, new(133 - anchoBrazo, 98, anchoBrazo, 42), new(44, 20, brazo, 12), new(44, 36));
+        Pieza(4, new(165, 98, anchoBrazo, 42), legado ? new(44, 20, 4, 12) : new(36, 52, brazo, 12), new(52, 52), legado);
+        Pieza(5, new(133, 140, 16, 42), new(4, 20, 4, 12), new(4, 36));
+        Pieza(6, new(149, 140, 16, 42), legado ? new(4, 20, 4, 12) : new(20, 52, 4, 12), new(4, 52), legado);
     }
 }

@@ -1,0 +1,1774 @@
+[
+  {
+    "id": "allay",
+    "categoria": "Criatura",
+    "nombre": "allay",
+    "wiki": "Allay",
+    "alias": [
+      "ánima",
+      "allay"
+    ]
+  },
+  {
+    "id": "armadillo",
+    "categoria": "Criatura",
+    "nombre": "armadillo",
+    "wiki": "Armadillo",
+    "alias": []
+  },
+  {
+    "id": "axolotl",
+    "categoria": "Criatura",
+    "nombre": "ajolote",
+    "wiki": "Axolotl",
+    "alias": []
+  },
+  {
+    "id": "bat",
+    "categoria": "Criatura",
+    "nombre": "murciélago",
+    "wiki": "Bat",
+    "alias": []
+  },
+  {
+    "id": "bee",
+    "categoria": "Criatura",
+    "nombre": "abeja",
+    "wiki": "Bee",
+    "alias": []
+  },
+  {
+    "id": "blaze",
+    "categoria": "Criatura",
+    "nombre": "blaze",
+    "wiki": "Blaze",
+    "alias": []
+  },
+  {
+    "id": "bogged",
+    "categoria": "Criatura",
+    "nombre": "ciénago",
+    "wiki": "Bogged",
+    "alias": []
+  },
+  {
+    "id": "breeze",
+    "categoria": "Criatura",
+    "nombre": "breeze",
+    "wiki": "Breeze",
+    "alias": []
+  },
+  {
+    "id": "camel",
+    "categoria": "Criatura",
+    "nombre": "camello",
+    "wiki": "Camel",
+    "alias": []
+  },
+  {
+    "id": "camel_husk",
+    "categoria": "Criatura",
+    "nombre": "camello disecado",
+    "wiki": "Camel Husk",
+    "alias": []
+  },
+  {
+    "id": "cat",
+    "categoria": "Criatura",
+    "nombre": "gato",
+    "wiki": "Cat",
+    "alias": []
+  },
+  {
+    "id": "cave_spider",
+    "categoria": "Criatura",
+    "nombre": "araña de cueva",
+    "wiki": "Cave Spider",
+    "alias": []
+  },
+  {
+    "id": "chicken",
+    "categoria": "Criatura",
+    "nombre": "pollo",
+    "wiki": "Chicken",
+    "alias": []
+  },
+  {
+    "id": "cod",
+    "categoria": "Criatura",
+    "nombre": "bacalao",
+    "wiki": "Cod",
+    "alias": []
+  },
+  {
+    "id": "copper_golem",
+    "categoria": "Criatura",
+    "nombre": "gólem de cobre",
+    "wiki": "Copper Golem",
+    "alias": []
+  },
+  {
+    "id": "cow",
+    "categoria": "Criatura",
+    "nombre": "vaca",
+    "wiki": "Cow",
+    "alias": []
+  },
+  {
+    "id": "creaking",
+    "categoria": "Criatura",
+    "nombre": "crepitante",
+    "wiki": "Creaking",
+    "alias": [
+      "crepitante"
+    ]
+  },
+  {
+    "id": "creeper",
+    "categoria": "Criatura",
+    "nombre": "creeper",
+    "wiki": "Creeper",
+    "alias": []
+  },
+  {
+    "id": "dolphin",
+    "categoria": "Criatura",
+    "nombre": "delfín",
+    "wiki": "Dolphin",
+    "alias": []
+  },
+  {
+    "id": "donkey",
+    "categoria": "Criatura",
+    "nombre": "burro",
+    "wiki": "Donkey",
+    "alias": []
+  },
+  {
+    "id": "drowned",
+    "categoria": "Criatura",
+    "nombre": "ahogado",
+    "wiki": "Drowned",
+    "alias": []
+  },
+  {
+    "id": "elder_guardian",
+    "categoria": "Criatura",
+    "nombre": "guardián anciano",
+    "wiki": "Elder Guardian",
+    "alias": [
+      "guardián anciano"
+    ]
+  },
+  {
+    "id": "ender_dragon",
+    "categoria": "Criatura",
+    "nombre": "enderdragón",
+    "wiki": "Ender Dragon",
+    "alias": [
+      "dragón del end",
+      "ender dragon"
+    ]
+  },
+  {
+    "id": "enderman",
+    "categoria": "Criatura",
+    "nombre": "enderman",
+    "wiki": "Enderman",
+    "alias": []
+  },
+  {
+    "id": "endermite",
+    "categoria": "Criatura",
+    "nombre": "endermite",
+    "wiki": "Endermite",
+    "alias": []
+  },
+  {
+    "id": "evoker",
+    "categoria": "Criatura",
+    "nombre": "evocador",
+    "wiki": "Evoker",
+    "alias": []
+  },
+  {
+    "id": "fox",
+    "categoria": "Criatura",
+    "nombre": "zorro",
+    "wiki": "Fox",
+    "alias": []
+  },
+  {
+    "id": "frog",
+    "categoria": "Criatura",
+    "nombre": "rana",
+    "wiki": "Frog",
+    "alias": []
+  },
+  {
+    "id": "ghast",
+    "categoria": "Criatura",
+    "nombre": "ghast",
+    "wiki": "Ghast",
+    "alias": []
+  },
+  {
+    "id": "giant",
+    "categoria": "Criatura",
+    "nombre": "zombi gigante",
+    "wiki": "Giant",
+    "alias": []
+  },
+  {
+    "id": "glow_squid",
+    "categoria": "Criatura",
+    "nombre": "calamar luminoso",
+    "wiki": "Glow Squid",
+    "alias": []
+  },
+  {
+    "id": "goat",
+    "categoria": "Criatura",
+    "nombre": "cabra",
+    "wiki": "Goat",
+    "alias": []
+  },
+  {
+    "id": "guardian",
+    "categoria": "Criatura",
+    "nombre": "guardián",
+    "wiki": "Guardian",
+    "alias": [
+      "guardián"
+    ]
+  },
+  {
+    "id": "happy_ghast",
+    "categoria": "Criatura",
+    "nombre": "ghast feliz",
+    "wiki": "Happy Ghast",
+    "alias": [
+      "ghast feliz"
+    ]
+  },
+  {
+    "id": "hoglin",
+    "categoria": "Criatura",
+    "nombre": "hoglin",
+    "wiki": "Hoglin",
+    "alias": []
+  },
+  {
+    "id": "horse",
+    "categoria": "Criatura",
+    "nombre": "caballo",
+    "wiki": "Horse",
+    "alias": []
+  },
+  {
+    "id": "husk",
+    "categoria": "Criatura",
+    "nombre": "disecado",
+    "wiki": "Husk",
+    "alias": [
+      "zombi momificado"
+    ]
+  },
+  {
+    "id": "illusioner",
+    "categoria": "Criatura",
+    "nombre": "ilusionista",
+    "wiki": "Illusioner",
+    "alias": []
+  },
+  {
+    "id": "iron_golem",
+    "categoria": "Criatura",
+    "nombre": "gólem de hierro",
+    "wiki": "Iron Golem",
+    "alias": []
+  },
+  {
+    "id": "llama",
+    "categoria": "Criatura",
+    "nombre": "llama",
+    "wiki": "Llama",
+    "alias": []
+  },
+  {
+    "id": "magma_cube",
+    "categoria": "Criatura",
+    "nombre": "cubo de magma",
+    "wiki": "Magma Cube",
+    "alias": []
+  },
+  {
+    "id": "mooshroom",
+    "categoria": "Criatura",
+    "nombre": "mooshroom",
+    "wiki": "Mooshroom",
+    "alias": [
+      "champiñaca"
+    ]
+  },
+  {
+    "id": "mule",
+    "categoria": "Criatura",
+    "nombre": "mula",
+    "wiki": "Mule",
+    "alias": []
+  },
+  {
+    "id": "nautilus",
+    "categoria": "Criatura",
+    "nombre": "nautilo",
+    "wiki": "Nautilus",
+    "alias": []
+  },
+  {
+    "id": "ocelot",
+    "categoria": "Criatura",
+    "nombre": "ocelote",
+    "wiki": "Ocelot",
+    "alias": []
+  },
+  {
+    "id": "panda",
+    "categoria": "Criatura",
+    "nombre": "panda",
+    "wiki": "Panda",
+    "alias": []
+  },
+  {
+    "id": "parched",
+    "categoria": "Criatura",
+    "nombre": "momificado",
+    "wiki": "Parched",
+    "alias": []
+  },
+  {
+    "id": "parrot",
+    "categoria": "Criatura",
+    "nombre": "loro",
+    "wiki": "Parrot",
+    "alias": []
+  },
+  {
+    "id": "phantom",
+    "categoria": "Criatura",
+    "nombre": "fantasma",
+    "wiki": "Phantom",
+    "alias": []
+  },
+  {
+    "id": "pig",
+    "categoria": "Criatura",
+    "nombre": "cerdo",
+    "wiki": "Pig",
+    "alias": []
+  },
+  {
+    "id": "piglin",
+    "categoria": "Criatura",
+    "nombre": "piglin",
+    "wiki": "Piglin",
+    "alias": []
+  },
+  {
+    "id": "piglin_brute",
+    "categoria": "Criatura",
+    "nombre": "piglin bruto",
+    "wiki": "Piglin Brute",
+    "alias": []
+  },
+  {
+    "id": "pillager",
+    "categoria": "Criatura",
+    "nombre": "saqueador",
+    "wiki": "Pillager",
+    "alias": []
+  },
+  {
+    "id": "polar_bear",
+    "categoria": "Criatura",
+    "nombre": "oso polar",
+    "wiki": "Polar Bear",
+    "alias": []
+  },
+  {
+    "id": "pufferfish",
+    "categoria": "Criatura",
+    "nombre": "pez globo",
+    "wiki": "Pufferfish",
+    "alias": []
+  },
+  {
+    "id": "rabbit",
+    "categoria": "Criatura",
+    "nombre": "conejo",
+    "wiki": "Rabbit",
+    "alias": []
+  },
+  {
+    "id": "ravager",
+    "categoria": "Criatura",
+    "nombre": "devastador",
+    "wiki": "Ravager",
+    "alias": []
+  },
+  {
+    "id": "salmon",
+    "categoria": "Criatura",
+    "nombre": "salmón",
+    "wiki": "Salmon",
+    "alias": []
+  },
+  {
+    "id": "sheep",
+    "categoria": "Criatura",
+    "nombre": "oveja",
+    "wiki": "Sheep",
+    "alias": []
+  },
+  {
+    "id": "shulker",
+    "categoria": "Criatura",
+    "nombre": "shulker",
+    "wiki": "Shulker",
+    "alias": []
+  },
+  {
+    "id": "silverfish",
+    "categoria": "Criatura",
+    "nombre": "lepisma",
+    "wiki": "Silverfish",
+    "alias": []
+  },
+  {
+    "id": "skeleton",
+    "categoria": "Criatura",
+    "nombre": "esqueleto",
+    "wiki": "Skeleton",
+    "alias": []
+  },
+  {
+    "id": "skeleton_horse",
+    "categoria": "Criatura",
+    "nombre": "caballo esqueleto",
+    "wiki": "Skeleton Horse",
+    "alias": []
+  },
+  {
+    "id": "slime",
+    "categoria": "Criatura",
+    "nombre": "slime",
+    "wiki": "Slime",
+    "alias": []
+  },
+  {
+    "id": "sniffer",
+    "categoria": "Criatura",
+    "nombre": "sniffer",
+    "wiki": "Sniffer",
+    "alias": []
+  },
+  {
+    "id": "snow_golem",
+    "categoria": "Criatura",
+    "nombre": "gólem de nieve",
+    "wiki": "Snow Golem",
+    "alias": []
+  },
+  {
+    "id": "spider",
+    "categoria": "Criatura",
+    "nombre": "araña",
+    "wiki": "Spider",
+    "alias": []
+  },
+  {
+    "id": "squid",
+    "categoria": "Criatura",
+    "nombre": "calamar",
+    "wiki": "Squid",
+    "alias": []
+  },
+  {
+    "id": "stray",
+    "categoria": "Criatura",
+    "nombre": "errante",
+    "wiki": "Stray",
+    "alias": [
+      "esqueleto glacial"
+    ]
+  },
+  {
+    "id": "strider",
+    "categoria": "Criatura",
+    "nombre": "lavagante",
+    "wiki": "Strider",
+    "alias": []
+  },
+  {
+    "id": "sulfur_cube",
+    "categoria": "Criatura",
+    "nombre": "cubo de azufre",
+    "wiki": "Sulfur Cube",
+    "alias": []
+  },
+  {
+    "id": "tadpole",
+    "categoria": "Criatura",
+    "nombre": "renacuajo",
+    "wiki": "Tadpole",
+    "alias": []
+  },
+  {
+    "id": "trader_llama",
+    "categoria": "Criatura",
+    "nombre": "llama ambulante",
+    "wiki": "Trader Llama",
+    "alias": []
+  },
+  {
+    "id": "tropical_fish",
+    "categoria": "Criatura",
+    "nombre": "pez tropical",
+    "wiki": "Tropical Fish",
+    "alias": []
+  },
+  {
+    "id": "turtle",
+    "categoria": "Criatura",
+    "nombre": "tortuga",
+    "wiki": "Turtle",
+    "alias": []
+  },
+  {
+    "id": "vex",
+    "categoria": "Criatura",
+    "nombre": "vex",
+    "wiki": "Vex",
+    "alias": []
+  },
+  {
+    "id": "villager",
+    "categoria": "Criatura",
+    "nombre": "aldeano",
+    "wiki": "Villager",
+    "alias": []
+  },
+  {
+    "id": "vindicator",
+    "categoria": "Criatura",
+    "nombre": "vindicador",
+    "wiki": "Vindicator",
+    "alias": []
+  },
+  {
+    "id": "wandering_trader",
+    "categoria": "Criatura",
+    "nombre": "vendedor ambulante",
+    "wiki": "Wandering Trader",
+    "alias": []
+  },
+  {
+    "id": "warden",
+    "categoria": "Criatura",
+    "nombre": "warden",
+    "wiki": "Warden",
+    "alias": []
+  },
+  {
+    "id": "witch",
+    "categoria": "Criatura",
+    "nombre": "bruja",
+    "wiki": "Witch",
+    "alias": []
+  },
+  {
+    "id": "wither",
+    "categoria": "Criatura",
+    "nombre": "wither",
+    "wiki": "Wither",
+    "alias": []
+  },
+  {
+    "id": "wither_skeleton",
+    "categoria": "Criatura",
+    "nombre": "esqueleto del wither",
+    "wiki": "Wither Skeleton",
+    "alias": []
+  },
+  {
+    "id": "wolf",
+    "categoria": "Criatura",
+    "nombre": "lobo",
+    "wiki": "Wolf",
+    "alias": []
+  },
+  {
+    "id": "zoglin",
+    "categoria": "Criatura",
+    "nombre": "zoglin",
+    "wiki": "Zoglin",
+    "alias": []
+  },
+  {
+    "id": "zombie",
+    "categoria": "Criatura",
+    "nombre": "zombi",
+    "wiki": "Zombie",
+    "alias": []
+  },
+  {
+    "id": "zombie_horse",
+    "categoria": "Criatura",
+    "nombre": "caballo zombi",
+    "wiki": "Zombie Horse",
+    "alias": []
+  },
+  {
+    "id": "zombie_nautilus",
+    "categoria": "Criatura",
+    "nombre": "nautilo zombi",
+    "wiki": "Zombie Nautilus",
+    "alias": []
+  },
+  {
+    "id": "zombie_villager",
+    "categoria": "Criatura",
+    "nombre": "aldeano zombi",
+    "wiki": "Zombie Villager",
+    "alias": []
+  },
+  {
+    "id": "zombified_piglin",
+    "categoria": "Criatura",
+    "nombre": "piglin zombificado",
+    "wiki": "Zombified Piglin",
+    "alias": [
+      "piglin zombificado"
+    ]
+  },
+  {
+    "id": "abandoned_camp_bamboo_jungle",
+    "categoria": "Estructura",
+    "nombre": "campamento de jungla de bambú",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_birch_forest",
+    "categoria": "Estructura",
+    "nombre": "campamento de abedular",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_cherry_grove",
+    "categoria": "Estructura",
+    "nombre": "campamento de cerezal",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_dappled_forest",
+    "categoria": "Estructura",
+    "nombre": "campamento de bosque moteado",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_flower_forest",
+    "categoria": "Estructura",
+    "nombre": "campamento de bosque floral",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_forest",
+    "categoria": "Estructura",
+    "nombre": "campamento de bosque",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_meadow",
+    "categoria": "Estructura",
+    "nombre": "campamento de prado",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_old_growth_birch_forest",
+    "categoria": "Estructura",
+    "nombre": "campamento de abedular ancestral",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_old_growth_pine_taiga",
+    "categoria": "Estructura",
+    "nombre": "campamento de taiga de pinos ancestral",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_old_growth_spruce_taiga",
+    "categoria": "Estructura",
+    "nombre": "campamento de taiga de abetos ancestral",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_pale_garden",
+    "categoria": "Estructura",
+    "nombre": "campamento de jardín pálido",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_savanna",
+    "categoria": "Estructura",
+    "nombre": "campamento de sabana",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_snowy_taiga",
+    "categoria": "Estructura",
+    "nombre": "campamento de taiga nevada",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_sparse_jungle",
+    "categoria": "Estructura",
+    "nombre": "campamento de jungla dispersa",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_swamp",
+    "categoria": "Estructura",
+    "nombre": "campamento de pantano",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_taiga",
+    "categoria": "Estructura",
+    "nombre": "campamento de taiga",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_windswept_forest",
+    "categoria": "Estructura",
+    "nombre": "campamento de bosque ventiscoso",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "abandoned_camp_wooded_badlands",
+    "categoria": "Estructura",
+    "nombre": "campamento de tierras baldías frondosas",
+    "wiki": "Abandoned Camp",
+    "alias": []
+  },
+  {
+    "id": "ancient_city",
+    "categoria": "Estructura",
+    "nombre": "ciudad antigua",
+    "wiki": "Ancient City",
+    "alias": []
+  },
+  {
+    "id": "bastion_remnant",
+    "categoria": "Estructura",
+    "nombre": "ruinas de bastión",
+    "wiki": "Bastion Remnant",
+    "alias": []
+  },
+  {
+    "id": "buried_treasure",
+    "categoria": "Estructura",
+    "nombre": "tesoro enterrado",
+    "wiki": "Buried Treasure",
+    "alias": []
+  },
+  {
+    "id": "desert_pyramid",
+    "categoria": "Estructura",
+    "nombre": "pirámide del desierto",
+    "wiki": "Desert Pyramid",
+    "alias": []
+  },
+  {
+    "id": "end_city",
+    "categoria": "Estructura",
+    "nombre": "ciudad del end",
+    "wiki": "End City",
+    "alias": []
+  },
+  {
+    "id": "fortress",
+    "categoria": "Estructura",
+    "nombre": "fortaleza del nether",
+    "wiki": "Nether Fortress",
+    "alias": []
+  },
+  {
+    "id": "igloo",
+    "categoria": "Estructura",
+    "nombre": "iglú",
+    "wiki": "Igloo",
+    "alias": []
+  },
+  {
+    "id": "jungle_pyramid",
+    "categoria": "Estructura",
+    "nombre": "templo de la jungla",
+    "wiki": "Jungle Pyramid",
+    "alias": []
+  },
+  {
+    "id": "mansion",
+    "categoria": "Estructura",
+    "nombre": "mansión del bosque",
+    "wiki": "Woodland Mansion",
+    "alias": []
+  },
+  {
+    "id": "mineshaft",
+    "categoria": "Estructura",
+    "nombre": "mina abandonada",
+    "wiki": "Mineshaft",
+    "alias": []
+  },
+  {
+    "id": "mineshaft_mesa",
+    "categoria": "Estructura",
+    "nombre": "mina de tierras baldías",
+    "wiki": "Mineshaft",
+    "alias": []
+  },
+  {
+    "id": "monument",
+    "categoria": "Estructura",
+    "nombre": "monumento oceánico",
+    "wiki": "Ocean Monument",
+    "alias": []
+  },
+  {
+    "id": "nether_fossil",
+    "categoria": "Estructura",
+    "nombre": "fósil del nether",
+    "wiki": "Nether Fossil",
+    "alias": []
+  },
+  {
+    "id": "ocean_ruin_cold",
+    "categoria": "Estructura",
+    "nombre": "ruinas oceánicas frías",
+    "wiki": "Ocean Ruins",
+    "alias": []
+  },
+  {
+    "id": "ocean_ruin_warm",
+    "categoria": "Estructura",
+    "nombre": "ruinas oceánicas cálidas",
+    "wiki": "Ocean Ruins",
+    "alias": []
+  },
+  {
+    "id": "pillager_outpost",
+    "categoria": "Estructura",
+    "nombre": "puesto de saqueadores",
+    "wiki": "Pillager Outpost",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal_desert",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas de desierto",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal_jungle",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas de jungla",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal_mountain",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas de montaña",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal_nether",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas de nether",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal_ocean",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas de océano",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "ruined_portal_swamp",
+    "categoria": "Estructura",
+    "nombre": "portal en ruinas de pantano",
+    "wiki": "Ruined Portal",
+    "alias": []
+  },
+  {
+    "id": "shipwreck",
+    "categoria": "Estructura",
+    "nombre": "naufragio",
+    "wiki": "Shipwreck",
+    "alias": []
+  },
+  {
+    "id": "shipwreck_beached",
+    "categoria": "Estructura",
+    "nombre": "naufragio varado",
+    "wiki": "Shipwreck",
+    "alias": []
+  },
+  {
+    "id": "stronghold",
+    "categoria": "Estructura",
+    "nombre": "fortaleza del end",
+    "wiki": "Stronghold",
+    "alias": []
+  },
+  {
+    "id": "swamp_hut",
+    "categoria": "Estructura",
+    "nombre": "cabaña de bruja",
+    "wiki": "Swamp Hut",
+    "alias": []
+  },
+  {
+    "id": "trail_ruins",
+    "categoria": "Estructura",
+    "nombre": "ruinas de sendero",
+    "wiki": "Trail Ruins",
+    "alias": []
+  },
+  {
+    "id": "trial_chambers",
+    "categoria": "Estructura",
+    "nombre": "cámaras de desafíos",
+    "wiki": "Trial Chambers",
+    "alias": []
+  },
+  {
+    "id": "village_desert",
+    "categoria": "Estructura",
+    "nombre": "aldea de desierto",
+    "wiki": "Village",
+    "alias": []
+  },
+  {
+    "id": "village_plains",
+    "categoria": "Estructura",
+    "nombre": "aldea de llanura",
+    "wiki": "Village",
+    "alias": []
+  },
+  {
+    "id": "village_savanna",
+    "categoria": "Estructura",
+    "nombre": "aldea de sabana",
+    "wiki": "Village",
+    "alias": []
+  },
+  {
+    "id": "village_snowy",
+    "categoria": "Estructura",
+    "nombre": "aldea de nieve",
+    "wiki": "Village",
+    "alias": []
+  },
+  {
+    "id": "village_taiga",
+    "categoria": "Estructura",
+    "nombre": "aldea de taiga",
+    "wiki": "Village",
+    "alias": []
+  },
+  {
+    "id": "bow",
+    "categoria": "Herramienta",
+    "nombre": "arco",
+    "wiki": "Bow",
+    "alias": []
+  },
+  {
+    "id": "brush",
+    "categoria": "Herramienta",
+    "nombre": "pincel",
+    "wiki": "Brush",
+    "alias": []
+  },
+  {
+    "id": "bucket",
+    "categoria": "Herramienta",
+    "nombre": "cubo",
+    "wiki": "Bucket",
+    "alias": []
+  },
+  {
+    "id": "bundle",
+    "categoria": "Herramienta",
+    "nombre": "saco",
+    "wiki": "Bundle",
+    "alias": []
+  },
+  {
+    "id": "carrot_on_a_stick",
+    "categoria": "Herramienta",
+    "nombre": "caña con zanahoria",
+    "wiki": "Carrot on a Stick",
+    "alias": []
+  },
+  {
+    "id": "chainmail_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de cota de mallas",
+    "wiki": "Chainmail Boots",
+    "alias": []
+  },
+  {
+    "id": "chainmail_chestplate",
+    "categoria": "Armadura",
+    "nombre": "peto de cota de mallas",
+    "wiki": "Chainmail Chestplate",
+    "alias": []
+  },
+  {
+    "id": "chainmail_helmet",
+    "categoria": "Armadura",
+    "nombre": "casco de cota de mallas",
+    "wiki": "Chainmail Helmet",
+    "alias": []
+  },
+  {
+    "id": "chainmail_leggings",
+    "categoria": "Armadura",
+    "nombre": "grebas de cota de mallas",
+    "wiki": "Chainmail Leggings",
+    "alias": []
+  },
+  {
+    "id": "clock",
+    "categoria": "Herramienta",
+    "nombre": "reloj",
+    "wiki": "Clock",
+    "alias": []
+  },
+  {
+    "id": "compass",
+    "categoria": "Herramienta",
+    "nombre": "brújula",
+    "wiki": "Compass",
+    "alias": []
+  },
+  {
+    "id": "copper_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de cobre",
+    "wiki": "Copper Axe",
+    "alias": []
+  },
+  {
+    "id": "copper_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de cobre",
+    "wiki": "Copper Boots",
+    "alias": []
+  },
+  {
+    "id": "copper_chestplate",
+    "categoria": "Armadura",
+    "nombre": "peto de cobre",
+    "wiki": "Copper Chestplate",
+    "alias": []
+  },
+  {
+    "id": "copper_helmet",
+    "categoria": "Armadura",
+    "nombre": "casco de cobre",
+    "wiki": "Copper Helmet",
+    "alias": []
+  },
+  {
+    "id": "copper_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de cobre",
+    "wiki": "Copper Hoe",
+    "alias": []
+  },
+  {
+    "id": "copper_horse_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de cobre para caballo",
+    "wiki": "Copper Horse Armor",
+    "alias": []
+  },
+  {
+    "id": "copper_leggings",
+    "categoria": "Armadura",
+    "nombre": "grebas de cobre",
+    "wiki": "Copper Leggings",
+    "alias": []
+  },
+  {
+    "id": "copper_nautilus_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de cobre para nautilo",
+    "wiki": "Copper Nautilus Armor",
+    "alias": []
+  },
+  {
+    "id": "copper_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de cobre",
+    "wiki": "Copper Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "copper_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de cobre",
+    "wiki": "Copper Shovel",
+    "alias": []
+  },
+  {
+    "id": "copper_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de cobre",
+    "wiki": "Copper Spear",
+    "alias": []
+  },
+  {
+    "id": "copper_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de cobre",
+    "wiki": "Copper Sword",
+    "alias": []
+  },
+  {
+    "id": "crossbow",
+    "categoria": "Herramienta",
+    "nombre": "ballesta",
+    "wiki": "Crossbow",
+    "alias": []
+  },
+  {
+    "id": "diamond_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de diamante",
+    "wiki": "Diamond Axe",
+    "alias": []
+  },
+  {
+    "id": "diamond_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de diamante",
+    "wiki": "Diamond Boots",
+    "alias": []
+  },
+  {
+    "id": "diamond_chestplate",
+    "categoria": "Armadura",
+    "nombre": "peto de diamante",
+    "wiki": "Diamond Chestplate",
+    "alias": []
+  },
+  {
+    "id": "diamond_helmet",
+    "categoria": "Armadura",
+    "nombre": "casco de diamante",
+    "wiki": "Diamond Helmet",
+    "alias": []
+  },
+  {
+    "id": "diamond_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de diamante",
+    "wiki": "Diamond Hoe",
+    "alias": []
+  },
+  {
+    "id": "diamond_horse_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de diamante para caballo",
+    "wiki": "Diamond Horse Armor",
+    "alias": []
+  },
+  {
+    "id": "diamond_leggings",
+    "categoria": "Armadura",
+    "nombre": "grebas de diamante",
+    "wiki": "Diamond Leggings",
+    "alias": []
+  },
+  {
+    "id": "diamond_nautilus_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de diamante para nautilo",
+    "wiki": "Diamond Nautilus Armor",
+    "alias": []
+  },
+  {
+    "id": "diamond_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de diamante",
+    "wiki": "Diamond Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "diamond_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de diamante",
+    "wiki": "Diamond Shovel",
+    "alias": []
+  },
+  {
+    "id": "diamond_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de diamante",
+    "wiki": "Diamond Spear",
+    "alias": []
+  },
+  {
+    "id": "diamond_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de diamante",
+    "wiki": "Diamond Sword",
+    "alias": []
+  },
+  {
+    "id": "elytra",
+    "categoria": "Herramienta",
+    "nombre": "élitros",
+    "wiki": "Elytra",
+    "alias": []
+  },
+  {
+    "id": "ender_pearl",
+    "categoria": "Herramienta",
+    "nombre": "perla de ender",
+    "wiki": "Ender Pearl",
+    "alias": []
+  },
+  {
+    "id": "fire_charge",
+    "categoria": "Herramienta",
+    "nombre": "carga ígnea",
+    "wiki": "Fire Charge",
+    "alias": []
+  },
+  {
+    "id": "fishing_rod",
+    "categoria": "Herramienta",
+    "nombre": "caña de pescar",
+    "wiki": "Fishing Rod",
+    "alias": []
+  },
+  {
+    "id": "flint_and_steel",
+    "categoria": "Herramienta",
+    "nombre": "mechero",
+    "wiki": "Flint and Steel",
+    "alias": []
+  },
+  {
+    "id": "golden_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de oro",
+    "wiki": "Golden Axe",
+    "alias": []
+  },
+  {
+    "id": "golden_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de oro",
+    "wiki": "Golden Boots",
+    "alias": []
+  },
+  {
+    "id": "golden_chestplate",
+    "categoria": "Armadura",
+    "nombre": "peto de oro",
+    "wiki": "Golden Chestplate",
+    "alias": []
+  },
+  {
+    "id": "golden_helmet",
+    "categoria": "Armadura",
+    "nombre": "casco de oro",
+    "wiki": "Golden Helmet",
+    "alias": []
+  },
+  {
+    "id": "golden_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de oro",
+    "wiki": "Golden Hoe",
+    "alias": []
+  },
+  {
+    "id": "golden_horse_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de oro para caballo",
+    "wiki": "Golden Horse Armor",
+    "alias": []
+  },
+  {
+    "id": "golden_leggings",
+    "categoria": "Armadura",
+    "nombre": "grebas de oro",
+    "wiki": "Golden Leggings",
+    "alias": []
+  },
+  {
+    "id": "golden_nautilus_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de oro para nautilo",
+    "wiki": "Golden Nautilus Armor",
+    "alias": []
+  },
+  {
+    "id": "golden_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de oro",
+    "wiki": "Golden Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "golden_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de oro",
+    "wiki": "Golden Shovel",
+    "alias": []
+  },
+  {
+    "id": "golden_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de oro",
+    "wiki": "Golden Spear",
+    "alias": []
+  },
+  {
+    "id": "golden_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de oro",
+    "wiki": "Golden Sword",
+    "alias": []
+  },
+  {
+    "id": "iron_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de hierro",
+    "wiki": "Iron Axe",
+    "alias": []
+  },
+  {
+    "id": "iron_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de hierro",
+    "wiki": "Iron Boots",
+    "alias": []
+  },
+  {
+    "id": "iron_chestplate",
+    "categoria": "Armadura",
+    "nombre": "peto de hierro",
+    "wiki": "Iron Chestplate",
+    "alias": []
+  },
+  {
+    "id": "iron_helmet",
+    "categoria": "Armadura",
+    "nombre": "casco de hierro",
+    "wiki": "Iron Helmet",
+    "alias": []
+  },
+  {
+    "id": "iron_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de hierro",
+    "wiki": "Iron Hoe",
+    "alias": []
+  },
+  {
+    "id": "iron_horse_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de hierro para caballo",
+    "wiki": "Iron Horse Armor",
+    "alias": []
+  },
+  {
+    "id": "iron_leggings",
+    "categoria": "Armadura",
+    "nombre": "grebas de hierro",
+    "wiki": "Iron Leggings",
+    "alias": []
+  },
+  {
+    "id": "iron_nautilus_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de hierro para nautilo",
+    "wiki": "Iron Nautilus Armor",
+    "alias": []
+  },
+  {
+    "id": "iron_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de hierro",
+    "wiki": "Iron Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "iron_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de hierro",
+    "wiki": "Iron Shovel",
+    "alias": []
+  },
+  {
+    "id": "iron_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de hierro",
+    "wiki": "Iron Spear",
+    "alias": []
+  },
+  {
+    "id": "iron_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de hierro",
+    "wiki": "Iron Sword",
+    "alias": []
+  },
+  {
+    "id": "lead",
+    "categoria": "Herramienta",
+    "nombre": "rienda",
+    "wiki": "Lead",
+    "alias": []
+  },
+  {
+    "id": "leather_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de cuero",
+    "wiki": "Leather Boots",
+    "alias": []
+  },
+  {
+    "id": "leather_chestplate",
+    "categoria": "Armadura",
+    "nombre": "túnica de cuero",
+    "wiki": "Leather Tunic",
+    "alias": []
+  },
+  {
+    "id": "leather_helmet",
+    "categoria": "Armadura",
+    "nombre": "sombrero de cuero",
+    "wiki": "Leather Cap",
+    "alias": []
+  },
+  {
+    "id": "leather_horse_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de cuero para caballo",
+    "wiki": "Leather Horse Armor",
+    "alias": []
+  },
+  {
+    "id": "leather_leggings",
+    "categoria": "Armadura",
+    "nombre": "pantalones de cuero",
+    "wiki": "Leather Pants",
+    "alias": []
+  },
+  {
+    "id": "mace",
+    "categoria": "Herramienta",
+    "nombre": "maza",
+    "wiki": "Mace",
+    "alias": []
+  },
+  {
+    "id": "map",
+    "categoria": "Herramienta",
+    "nombre": "mapa en blanco",
+    "wiki": "Empty Map",
+    "alias": []
+  },
+  {
+    "id": "name_tag",
+    "categoria": "Herramienta",
+    "nombre": "etiqueta",
+    "wiki": "Name Tag",
+    "alias": []
+  },
+  {
+    "id": "netherite_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de netherita",
+    "wiki": "Netherite Axe",
+    "alias": []
+  },
+  {
+    "id": "netherite_boots",
+    "categoria": "Armadura",
+    "nombre": "botas de netherita",
+    "wiki": "Netherite Boots",
+    "alias": []
+  },
+  {
+    "id": "netherite_chestplate",
+    "categoria": "Armadura",
+    "nombre": "peto de netherita",
+    "wiki": "Netherite Chestplate",
+    "alias": []
+  },
+  {
+    "id": "netherite_helmet",
+    "categoria": "Armadura",
+    "nombre": "casco de netherita",
+    "wiki": "Netherite Helmet",
+    "alias": []
+  },
+  {
+    "id": "netherite_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de netherita",
+    "wiki": "Netherite Hoe",
+    "alias": []
+  },
+  {
+    "id": "netherite_horse_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de netherita para caballo",
+    "wiki": "Netherite Horse Armor",
+    "alias": []
+  },
+  {
+    "id": "netherite_leggings",
+    "categoria": "Armadura",
+    "nombre": "grebas de netherita",
+    "wiki": "Netherite Leggings",
+    "alias": []
+  },
+  {
+    "id": "netherite_nautilus_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura de netherita para nautilo",
+    "wiki": "Netherite Nautilus Armor",
+    "alias": []
+  },
+  {
+    "id": "netherite_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de netherita",
+    "wiki": "Netherite Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "netherite_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de netherita",
+    "wiki": "Netherite Shovel",
+    "alias": []
+  },
+  {
+    "id": "netherite_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de netherita",
+    "wiki": "Netherite Spear",
+    "alias": []
+  },
+  {
+    "id": "netherite_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de netherita",
+    "wiki": "Netherite Sword",
+    "alias": []
+  },
+  {
+    "id": "recovery_compass",
+    "categoria": "Herramienta",
+    "nombre": "brújula de recuperación",
+    "wiki": "Recovery Compass",
+    "alias": []
+  },
+  {
+    "id": "saddle",
+    "categoria": "Herramienta",
+    "nombre": "montura",
+    "wiki": "Saddle",
+    "alias": []
+  },
+  {
+    "id": "shears",
+    "categoria": "Herramienta",
+    "nombre": "tijeras",
+    "wiki": "Shears",
+    "alias": []
+  },
+  {
+    "id": "shield",
+    "categoria": "Herramienta",
+    "nombre": "escudo",
+    "wiki": "Shield",
+    "alias": []
+  },
+  {
+    "id": "spyglass",
+    "categoria": "Herramienta",
+    "nombre": "catalejo",
+    "wiki": "Spyglass",
+    "alias": []
+  },
+  {
+    "id": "stone_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de piedra",
+    "wiki": "Stone Axe",
+    "alias": []
+  },
+  {
+    "id": "stone_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de piedra",
+    "wiki": "Stone Hoe",
+    "alias": []
+  },
+  {
+    "id": "stone_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de piedra",
+    "wiki": "Stone Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "stone_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de piedra",
+    "wiki": "Stone Shovel",
+    "alias": []
+  },
+  {
+    "id": "stone_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de piedra",
+    "wiki": "Stone Spear",
+    "alias": []
+  },
+  {
+    "id": "stone_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de piedra",
+    "wiki": "Stone Sword",
+    "alias": []
+  },
+  {
+    "id": "trident",
+    "categoria": "Herramienta",
+    "nombre": "tridente",
+    "wiki": "Trident",
+    "alias": []
+  },
+  {
+    "id": "turtle_helmet",
+    "categoria": "Armadura",
+    "nombre": "caparazón de tortuga",
+    "wiki": "Turtle Shell",
+    "alias": []
+  },
+  {
+    "id": "warped_fungus_on_a_stick",
+    "categoria": "Herramienta",
+    "nombre": "caña con hongo distorsionado",
+    "wiki": "Warped Fungus on a Stick",
+    "alias": []
+  },
+  {
+    "id": "wind_charge",
+    "categoria": "Herramienta",
+    "nombre": "carga de viento",
+    "wiki": "Wind Charge",
+    "alias": []
+  },
+  {
+    "id": "wolf_armor",
+    "categoria": "Armadura",
+    "nombre": "armadura para lobo",
+    "wiki": "Wolf Armor",
+    "alias": []
+  },
+  {
+    "id": "wooden_axe",
+    "categoria": "Herramienta",
+    "nombre": "hacha de madera",
+    "wiki": "Wooden Axe",
+    "alias": []
+  },
+  {
+    "id": "wooden_hoe",
+    "categoria": "Herramienta",
+    "nombre": "azada de madera",
+    "wiki": "Wooden Hoe",
+    "alias": []
+  },
+  {
+    "id": "wooden_pickaxe",
+    "categoria": "Herramienta",
+    "nombre": "pico de madera",
+    "wiki": "Wooden Pickaxe",
+    "alias": []
+  },
+  {
+    "id": "wooden_shovel",
+    "categoria": "Herramienta",
+    "nombre": "pala de madera",
+    "wiki": "Wooden Shovel",
+    "alias": []
+  },
+  {
+    "id": "wooden_spear",
+    "categoria": "Herramienta",
+    "nombre": "lanza de madera",
+    "wiki": "Wooden Spear",
+    "alias": []
+  },
+  {
+    "id": "wooden_sword",
+    "categoria": "Herramienta",
+    "nombre": "espada de madera",
+    "wiki": "Wooden Sword",
+    "alias": []
+  }
+]

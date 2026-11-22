@@ -42,6 +42,7 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
 
           Copy-Item -LiteralPath LICENSE -Destination $portatil
+          Copy-Item -LiteralPath src/Ahorcado/Recursos/PixelifySans-OFL.txt -Destination $portatil
           $net = Get-ChildItem -LiteralPath (Join-Path $env:NUGET_PACKAGES 'microsoft.netcore.app.runtime.win-x64') -Directory
           $desktop = Get-ChildItem -LiteralPath (Join-Path $env:NUGET_PACKAGES 'microsoft.windowsdesktop.app.runtime.win-x64') -Directory
           if (@($net).Count -ne 1 -or @($desktop).Count -ne 1) {

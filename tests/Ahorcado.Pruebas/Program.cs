@@ -33,13 +33,30 @@ revelada.Revelar();
 Verificar(revelada.Estado == EstadoPartida.Revelada && revelada.Mascara == "blaze" && revelada.Fallos == 0,
           "Mostrar la solución no gasta fallos.");
 
-string palabra = Criaturas.Elegir(null);
-for (int i = 0; i < 150; i++)
+Verificar(Catalogo.Entradas.Count == 250 && Catalogo.Entradas.Select(e => e.Id).Distinct().Count() == 250,
+    "El catálogo tiene 250 identificadores distintos.");
+foreach (var item in Catalogo.Entradas)
 {
-    string siguiente = Criaturas.Elegir(palabra);
-    Verificar(siguiente != palabra, "Las partidas consecutivas usan criaturas diferentes.");
-    _ = new Partida(siguiente);
-    palabra = siguiente;
+    var juego = new Partida(item.Nombre, item.Alias);
+    Verificar(juego.Probar(item.Nombre) == ResultadoJugada.Acierto && juego.Estado == EstadoPartida.Ganada,
+        $"El nombre del catálogo se puede acertar: {item.Nombre}");
+    Verificar(item.Enlace.Host == "minecraft.wiki" && item.Enlace.AbsolutePath.StartsWith("/w/"),
+        $"La ficha del catálogo apunta a la wiki: {item.Nombre}");
 }
+
+EntradaCatalogo? anterior = null;
+foreach (string categoria in new[] { "Todas", "Criatura", "Estructura", "Armadura", "Herramienta" })
+for (int i = 0; i < 32; i++)
+{
+    var siguiente = Catalogo.Elegir(categoria, anterior);
+    Verificar(siguiente != anterior && (categoria == "Todas" || siguiente.Categoria == categoria),
+        $"La selección respeta la categoría {categoria} y evita repetir.");
+    anterior = siguiente;
+}
+
+var allay = Catalogo.Entradas.Single(e => e.Id == "allay");
+var alias = new Partida(allay.Nombre, allay.Alias);
+Verificar(alias.Probar("anima") == ResultadoJugada.Acierto && alias.Estado == EstadoPartida.Ganada,
+    "Un alias admite tildes omitidas.");
 
 Console.WriteLine("Pruebas del juego correctas.");
