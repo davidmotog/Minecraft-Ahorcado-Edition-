@@ -10,6 +10,7 @@
     <Product>Ahorcado: edición Minecraft</Product>
     <Description>Juego del ahorcado con el catálogo de Minecraft Java</Description>
     <Version>2.2026.11.22</Version>
+    <InformationalVersion>2.2026.11.22.2</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
   <ItemGroup>

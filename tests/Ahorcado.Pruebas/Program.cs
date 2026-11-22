@@ -59,4 +59,17 @@ var alias = new Partida(allay.Nombre, allay.Alias);
 Verificar(alias.Probar("anima") == ResultadoJugada.Acierto && alias.Estado == EstadoPartida.Ganada,
     "Un alias admite tildes omitidas.");
 
-Console.WriteLine("Pruebas del juego correctas.");
+static string Publicacion(string etiqueta, bool preliminar = false) =>
+    System.Text.Json.JsonSerializer.Serialize(new { tag_name = etiqueta, prerelease = preliminar });
+
+const string actual = "2.2026.11.22.2";
+Verificar(Actualizaciones.Evaluar(actual, Publicacion("v2.2026.11.22")) is null, "La versión del mismo día sin corrección es anterior.");
+Verificar(Actualizaciones.Evaluar(actual, Publicacion("v2.2026.11.22.2")) is null, "La misma versión está al día.");
+Verificar(Actualizaciones.Evaluar(actual, Publicacion("v2.2026.11.22.10")) is { Version: "2.2026.11.22.10" },
+    "El número de corrección se compara como entero.");
+Verificar(Actualizaciones.Evaluar(actual, Publicacion("v2.2026.11.23"))?.Pagina.AbsolutePath.EndsWith("/v2.2026.11.23") == true,
+    "Una fecha posterior ofrece su página de descarga.");
+Verificar(Actualizaciones.Evaluar(actual, Publicacion("alfa2.0", preliminar: true)) is null,
+    "Una publicación histórica no se ofrece como actualización.");
+
+Console.WriteLine("Pruebas del juego y de versiones correctas.");

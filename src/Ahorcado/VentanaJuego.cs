@@ -1,4 +1,7 @@
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
+using System.Text.Json;
 
 namespace Ahorcado;
 
@@ -33,8 +36,8 @@ internal sealed class VentanaJuego : Form
         this.fuente = fuente;
         Text = "Ahorcado · Edición Minecraft";
         StartPosition = FormStartPosition.CenterScreen;
-        ClientSize = new Size(880, 560);
-        MinimumSize = new Size(780, 540);
+        ClientSize = new Size(920, 620);
+        MinimumSize = new Size(880, 625);
         AutoScaleMode = AutoScaleMode.Dpi;
         BackColor = Fondo;
         ForeColor = Texto;
@@ -69,8 +72,17 @@ internal sealed class VentanaJuego : Form
         var aviso = Etiqueta($"Proyecto de fans independiente de Mojang y Microsoft · v{Application.ProductVersion}");
         aviso.ForeColor = Secundario;
         aviso.Font = new Font(Font.FontFamily, 9);
-        aviso.Margin = new Padding(0, 14, 0, 0);
-        layout.Controls.Add(aviso, 0, 3);
+        aviso.Anchor = AnchorStyles.Left;
+        aviso.Margin = new Padding(0);
+        var actualizar = Boton("Buscar actualizaciones");
+        actualizar.Anchor = AnchorStyles.Right;
+        actualizar.Click += async (_, _) => await BuscarActualizaciones(actualizar);
+        var pie = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Margin = new Padding(0, 10, 0, 0) };
+        pie.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        pie.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        pie.Controls.Add(aviso, 0, 0);
+        pie.Controls.Add(actualizar, 1, 0);
+        layout.Controls.Add(pie, 0, 3);
 
         nueva.Click += (_, _) => Comenzar();
         enviar.Click += (_, _) => Probar();
@@ -106,6 +118,7 @@ internal sealed class VentanaJuego : Form
         letras.ForeColor = Secundario;
         mascara.Font = fuenteMascara;
         mascara.ForeColor = Texto;
+        mascara.MinimumSize = new Size(0, 74);
         mascara.Margin = new Padding(3, 4, 3, 4);
         panel.Controls.Add(intentos, 0, 2);
         panel.Controls.Add(letras, 0, 3);
@@ -151,6 +164,47 @@ internal sealed class VentanaJuego : Form
         };
         boton.FlatAppearance.BorderColor = principal ? Acento : Color.FromArgb(75, 101, 117);
         return boton;
+    }
+
+    private async Task BuscarActualizaciones(Button boton)
+    {
+        const string titulo = "Buscar actualizaciones";
+        boton.Enabled = false;
+        boton.Text = "Buscando…";
+        try
+        {
+            var disponible = await Actualizaciones.Buscar(Application.ProductVersion);
+            if (IsDisposed) return;
+            if (disponible is null)
+            {
+                MessageBox.Show(this, $"Tienes la última versión disponible ({Application.ProductVersion}).",
+                    titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (MessageBox.Show(this, $"Está disponible la versión {disponible.Version}. ¿Abrir su página de descarga en GitHub?",
+                titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Process.Start(new ProcessStartInfo(disponible.Pagina.AbsoluteUri) { UseShellExecute = true });
+        }
+        catch (Exception error) when (error is HttpRequestException or OperationCanceledException or IOException or JsonException)
+        {
+            if (!IsDisposed)
+                MessageBox.Show(this, "No se pudo comprobar la actualización. Revisa tu conexión y vuelve a intentarlo.",
+                    titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        catch (Win32Exception)
+        {
+            MessageBox.Show(this, "Windows no pudo abrir el navegador. Puedes consultar la publicación en GitHub.",
+                titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        finally
+        {
+            if (!IsDisposed)
+            {
+                boton.Text = titulo;
+                boton.Enabled = true;
+            }
+        }
     }
 
     private void Comenzar()

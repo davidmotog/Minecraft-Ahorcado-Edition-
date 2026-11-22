@@ -4,6 +4,8 @@ Proyecto final de un curso de C# de [davidmotog](https://github.com/davidmotog).
 
 **[Descargar Ahorcado.exe para Windows x64](https://github.com/davidmotog/Minecraft-Ahorcado-Edition-/releases/latest/download/Ahorcado.exe)** · [Descargar en ZIP](https://github.com/davidmotog/Minecraft-Ahorcado-Edition-/releases/latest/download/Ahorcado-win-x64.zip)
 
+La [edición histórica Alfa 2.0](https://github.com/davidmotog/Minecraft-Ahorcado-Edition-/releases/tag/alfa2.0) conserva la interfaz y las reglas del proyecto original del curso. Se publica aparte para Windows x64.
+
 Proyecto de fans independiente de Mojang y Microsoft. [Directrices de uso de Minecraft](https://www.minecraft.net/es-es/usage-guidelines)
 
 ![Partida en curso de Ahorcado con el selector de categorías y el botón Personalizar](docs/partida.png)
@@ -14,6 +16,8 @@ Proyecto de fans independiente de Mojang y Microsoft. [Directrices de uso de Min
 2. Elige una categoría o deja **Todas**. Pulsa **Comenzar** y prueba una letra o escribe el nombre completo. Puedes pulsar **Intro** para enviar la respuesta.
 3. Hay seis fallos por partida. Las respuestas repetidas y las entradas inválidas se ignoran. Se admiten mayúsculas, minúsculas y respuestas sin tildes. La Ñ cuenta como letra distinta de la N.
 4. Al ganar, se abre una ficha con la respuesta, su categoría y un enlace a sus imágenes. Pulsa **Mostrar solución** para revelar una respuesta, o **Nueva partida** para jugar de nuevo.
+
+Usa **Buscar actualizaciones**, en la parte inferior, para consultar la última versión estable de GitHub. Si hay una más reciente, puedes abrir su página de descarga desde el aviso.
 
 ## Skins e imágenes
 
