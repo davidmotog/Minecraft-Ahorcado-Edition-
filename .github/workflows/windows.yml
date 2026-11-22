@@ -1,0 +1,66 @@
+name: Ahorcado para Windows
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2025
+    timeout-minutes: 15
+    steps:
+      - name: Obtener el código
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Instalar el SDK de .NET
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          global-json-file: global.json
+      - name: Compilar la solución y probar las reglas
+        shell: pwsh
+        run: |
+          dotnet build Ahorcado.sln -c Release --nologo -warnaserror
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          dotnet run --project tests/Ahorcado.Pruebas -c Release --no-build
+          exit $LASTEXITCODE
+      - name: Generar la edición portátil de Windows
+        if: github.event_name != 'pull_request'
+        shell: pwsh
+        env:
+          NUGET_PACKAGES: ${{ runner.temp }}/nuget-ahorcado
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $portatil = Join-Path $env:RUNNER_TEMP 'ahorcado'
+          dotnet publish src/Ahorcado/Ahorcado.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true -p:DebugType=None -o $portatil
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+
+          Copy-Item -LiteralPath LICENSE -Destination $portatil
+          $net = Get-ChildItem -LiteralPath (Join-Path $env:NUGET_PACKAGES 'microsoft.netcore.app.runtime.win-x64') -Directory
+          $desktop = Get-ChildItem -LiteralPath (Join-Path $env:NUGET_PACKAGES 'microsoft.windowsdesktop.app.runtime.win-x64') -Directory
+          if (@($net).Count -ne 1 -or @($desktop).Count -ne 1) {
+            throw 'No se pudieron identificar los paquetes de .NET que se redistribuyen.'
+          }
+          Copy-Item -LiteralPath (Join-Path $net.FullName 'LICENSE.TXT') -Destination (Join-Path $portatil 'LICENSE-dotnet.txt')
+          Copy-Item -LiteralPath (Join-Path $net.FullName 'THIRD-PARTY-NOTICES.TXT') -Destination $portatil
+          Copy-Item -LiteralPath (Join-Path $desktop.FullName 'LICENSE') -Destination (Join-Path $portatil 'LICENSE-windowsdesktop.txt')
+
+          $zip = Join-Path $env:RUNNER_TEMP 'Ahorcado-win-x64.zip'
+          Compress-Archive -Path "$portatil\*" -DestinationPath $zip
+          $hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  Ahorcado-win-x64.zip" | Set-Content -LiteralPath (Join-Path $env:RUNNER_TEMP 'SHA256SUMS.txt') -Encoding ascii
+      - name: Guardar la descarga y su SHA-256
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: Ahorcado-win-x64
+          path: |
+            ${{ runner.temp }}/Ahorcado-win-x64.zip
+            ${{ runner.temp }}/SHA256SUMS.txt
+          if-no-files-found: error
