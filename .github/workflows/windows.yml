@@ -55,6 +55,8 @@ jobs:
           Compress-Archive -Path "$portatil\*" -DestinationPath $zip
           $hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
           "$hash  Ahorcado-win-x64.zip" | Set-Content -LiteralPath (Join-Path $env:RUNNER_TEMP 'SHA256SUMS.txt') -Encoding ascii
+          $exeHash = (Get-FileHash -LiteralPath (Join-Path $portatil 'Ahorcado.exe') -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$exeHash  Ahorcado.exe" | Set-Content -LiteralPath (Join-Path $env:RUNNER_TEMP 'SHA256SUMS-EXE.txt') -Encoding ascii
       - name: Guardar la descarga y su SHA-256
         if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -62,5 +64,7 @@ jobs:
           name: Ahorcado-win-x64
           path: |
             ${{ runner.temp }}/Ahorcado-win-x64.zip
+            ${{ runner.temp }}/ahorcado/Ahorcado.exe
             ${{ runner.temp }}/SHA256SUMS.txt
+            ${{ runner.temp }}/SHA256SUMS-EXE.txt
           if-no-files-found: error
