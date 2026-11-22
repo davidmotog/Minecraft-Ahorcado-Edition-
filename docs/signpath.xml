@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<artifact-configuration xmlns="http://signpath.io/artifact-configuration/v1">
+  <parameters>
+    <parameter name="version" required="true" />
+    <parameter name="versionArchivo" required="true" />
+  </parameters>
+  <zip-file>
+    <pe-file path="Ahorcado.exe" product-name="Ahorcado: edición Minecraft"
+             product-version="${version}" file-version="${versionArchivo}">
+      <authenticode-sign />
+    </pe-file>
+  </zip-file>
+</artifact-configuration>

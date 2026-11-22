@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      firmar:
+        description: Solicitar la firma a SignPath
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -14,6 +19,10 @@ jobs:
   windows:
     runs-on: windows-2025
     timeout-minutes: 15
+    outputs:
+      artefacto: ${{ steps.entrada-firma.outputs.artifact-id }}
+      version: ${{ steps.metadatos.outputs.version }}
+      version-archivo: ${{ steps.metadatos.outputs.version-archivo }}
     steps:
       - name: Obtener el código
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -70,4 +79,91 @@ jobs:
             ${{ runner.temp }}/Ahorcado.exe
             ${{ runner.temp }}/SHA256SUMS.txt
             ${{ runner.temp }}/SHA256SUMS-EXE.txt
+          if-no-files-found: error
+      - name: Leer los metadatos del ejecutable para firma
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+        id: metadatos
+        shell: pwsh
+        run: |
+          $exe = Join-Path $env:RUNNER_TEMP 'Ahorcado.exe'
+          $info = (Get-Item -LiteralPath $exe).VersionInfo
+          if ($info.ProductName -ne 'Ahorcado: edición Minecraft' -or
+              $info.ProductVersion -notmatch '^\d+\.\d{4}\.\d{1,2}\.\d{1,2}(\.\d+)?$' -or
+              $info.FileVersion -ne (($info.ProductVersion.Split('.') | Select-Object -First 4) -join '.')) {
+            throw 'Los metadatos de Ahorcado.exe no coinciden con el formato de la versión.'
+          }
+          "version=$($info.ProductVersion)" >> $env:GITHUB_OUTPUT
+          "version-archivo=$($info.FileVersion)" >> $env:GITHUB_OUTPUT
+      - name: Guardar el ejecutable para SignPath
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+        id: entrada-firma
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f3764cd9 # v7.0.2
+        with:
+          name: compilado-para-firma
+          path: ${{ runner.temp }}/Ahorcado.exe
+          if-no-files-found: error
+
+  firmar:
+    if: github.event_name == 'workflow_dispatch' && inputs.firmar && github.ref == 'refs/heads/main'
+    needs: windows
+    runs-on: windows-2025
+    timeout-minutes: 40
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Comprobar la configuración de SignPath
+        shell: pwsh
+        env:
+          SIGNPATH_TOKEN: ${{ secrets.SIGNPATH_API_TOKEN }}
+          SIGNPATH_ORG: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          SIGNPATH_PROYECTO: ${{ vars.SIGNPATH_PROJECT_SLUG }}
+          SIGNPATH_POLITICA: ${{ vars.SIGNPATH_SIGNING_POLICY_SLUG }}
+        run: |
+          if (!$env:SIGNPATH_TOKEN -or !$env:SIGNPATH_ORG -or !$env:SIGNPATH_PROYECTO -or !$env:SIGNPATH_POLITICA) {
+            throw 'Falta vincular este repositorio a un proyecto y una política de SignPath.'
+          }
+      - name: Solicitar firma y descargar el resultado
+        uses: signpath/github-action-submit-signing-request@a2c5b60d9c75f073142b653c354b632eedce097b # v3
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: ${{ vars.SIGNPATH_PROJECT_SLUG }}
+          signing-policy-slug: ${{ vars.SIGNPATH_SIGNING_POLICY_SLUG }}
+          github-artifact-id: ${{ needs.windows.outputs.artefacto }}
+          parameters: |
+            version: ${{ toJSON(needs.windows.outputs.version) }}
+            versionArchivo: ${{ toJSON(needs.windows.outputs.version-archivo) }}
+          wait-for-completion: true
+          wait-for-completion-timeout-in-seconds: 1800
+          output-artifact-directory: ${{ runner.temp }}/firmado
+      - name: Verificar la firma y calcular SHA-256
+        shell: pwsh
+        env:
+          VERSION_ESPERADA: ${{ needs.windows.outputs.version }}
+          VERSION_ARCHIVO_ESPERADA: ${{ needs.windows.outputs.version-archivo }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $carpeta = Join-Path $env:RUNNER_TEMP 'firmado'
+          $ejecutable = Join-Path $carpeta 'Ahorcado.exe'
+          $info = (Get-Item -LiteralPath $ejecutable).VersionInfo
+          $firma = Get-AuthenticodeSignature -LiteralPath $ejecutable
+          if ($firma.Status -ne 'Valid' -or !$firma.TimeStamperCertificate -or
+              $firma.SignerCertificate.GetNameInfo('SimpleName', $false) -ne 'SignPath Foundation') {
+            throw 'La firma, el editor o el sello de tiempo no son válidos.'
+          }
+          if ($info.ProductName -ne 'Ahorcado: edición Minecraft' -or
+              $info.ProductVersion -ne $env:VERSION_ESPERADA -or
+              $info.FileVersion -ne $env:VERSION_ARCHIVO_ESPERADA) {
+            throw 'Los metadatos del binario firmado no coinciden con la compilación.'
+          }
+          $hash = (Get-FileHash -LiteralPath $ejecutable -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  Ahorcado.exe" | Set-Content -LiteralPath (Join-Path $carpeta 'SHA256SUMS-EXE.txt') -Encoding ascii
+      - name: Guardar el ejecutable firmado y verificado
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: version-firmada
+          path: |
+            ${{ runner.temp }}/firmado/Ahorcado.exe
+            ${{ runner.temp }}/firmado/SHA256SUMS-EXE.txt
           if-no-files-found: error

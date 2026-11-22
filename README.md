@@ -48,3 +48,11 @@ El proyecto está en [src/Ahorcado](src/Ahorcado). `Partida.cs` contiene las reg
 ## Licencia
 
 El código y las ilustraciones originales de esta edición se distribuyen con la [licencia MIT](LICENSE). Los títulos usan [Pixelify Sans](https://github.com/eifetx/Pixelify-Sans), bajo la [SIL Open Font License 1.1](src/Ahorcado/Recursos/PixelifySans-OFL.txt). Minecraft, sus marcas y sus recursos oficiales pertenecen a sus respectivos titulares.
+
+## Code signing policy
+
+La firma gratuita se solicitará a SignPath.io con certificado de SignPath Foundation. La aprobación del proyecto y la primera firma están pendientes. Las descargas actuales se publicaron sin firma. [Condiciones de SignPath Foundation](https://signpath.org/terms)
+
+[davidmotog](https://github.com/davidmotog) es el mantenedor responsable de revisar los cambios y aprobar las solicitudes de firma. El ejecutable se compila en GitHub Actions. La [configuración de SignPath](docs/signpath.xml) limita la firma a `Ahorcado.exe` y comprueba los metadatos del producto.
+
+El juego usa la red cuando solicitas buscar una skin pública en Mojang, comprobar la última versión en GitHub o abrir una ficha de Minecraft Wiki en el navegador. Las fotos asociadas y la skin seleccionada se guardan en el equipo.
